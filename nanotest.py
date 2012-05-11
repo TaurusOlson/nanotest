@@ -1,10 +1,16 @@
 #!/usr/bin/env python
 
 
-
 class Nanotest(object):
-    def __init__(self, arg):
+    truth_table = {True: 'OK', False: 'NOK'}
+
+    def __init__(self, arg=None):
         self.arg = arg
+
+    def initialize(self, arg):
+        self.arg = arg
+        self.total += 1
+        return Nanotest(self.arg)
 
     def comparison(self, other, relation):
         if isinstance(self.arg, int):
@@ -13,48 +19,46 @@ class Nanotest(object):
             result = getattr(self.arg, relation)(other)
         return result
 
-    def __eq__(self, other):
-        return self.comparison(other, '__eq__')
-
     def eq(self, other):
-        print "be equal to %r..." % other
-        return self.comparison(other, '__eq__')
+        result = self.comparison(other, '__eq__')
+        print "be equal to %r... %s" % (other, self.truth_table[result])
 
     def ne(self, other):
-        print "not be equal to %r..." % other
-        return self.comparison(other, '__ne__')
+        result = self.comparison(other, '__ne__')
+        print "not be equal to %r... %s" % (other, self.truth_table[result])
 
     def gt(self, other):
-        print "be greater than %r..." % other
-        return self.comparison(other, '__gt__')
+        result = self.comparison(other, '__gt__')
+        print "be greater than %r... %s" % (other, self.truth_table[result])
 
     def ge(self, other):
-        print "be greater or equal to %r..." % other
-        return self.comparison(other, '__ge__')
+        result = self.comparison(other, '__ge__')
+        print "be greater or equal to %r... %s" % (other, self.truth_table[result])
 
     def lt(self, other):
-        print "be lower than %r..." % other
-        return self.comparison(other, '__lt__')
+        result = self.comparison(other, '__lt__')
+        print "be lower than %r... %s" % (other, self.truth_table[result])
 
     def le(self, other):
-        print "be lower or equal to %r..." % other
-        return self.comparison(other, '__le__')
+        result = self.comparison(other, '__le__')
+        print "be lower or equal to %r... %s" % (other, self.truth_table[result])
 
     def is_(self, other):
-        print "be %r" % other
-        return self.arg is other
+        result = self.arg is other
+        print "be %r... %s" % (other, self.truth_table[result])
 
     def is_not(self, other):
-        print "not be %r..." % other
-        return self.arg is not other
+        result = self.arg is not other
+        print "not be %r... %s" % (other, self.truth_table[result])
 
     def contains(self, other):
-        print "contain %r..." % other
-        return other in self.arg 
+        result = other in self.arg 
+        print "contain %r... %s" % (other, self.truth_table[result])
 
     def contains_no(self, other):
-        print "not contain %r..." % other
-        return other not in self.arg
+        result = other not in self.arg
+        print "not contain %r... %s" % (other, self.truth_table[result])
+
 
 def test(a):
     print "%r should" % a,
