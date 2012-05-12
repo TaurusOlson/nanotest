@@ -25,6 +25,8 @@ Here are a few reasons:
 
 # USAGE
 
+    from nanotest import test
+
 ## Test (in)equality
 
     test(42).eq(40 + 2)
@@ -75,10 +77,3 @@ Here are a few reasons:
 I wanted a tiny testing framework. I like physics so nano sounds good. Hence nanotest ;)
 
 
-# TODO
-
-* Write some unit tests...
-
-* Add methods handling exceptions 
-
-* Add methods for almost equality
