@@ -16,13 +16,6 @@ Here are a few reasons:
   it long to setup. Most of the time, its rigidity frustrates me and I end up
   skipping the testing phase!
 
-* [nosetests](http://readthedocs.org/docs/nose/en/latest/) is great and
-  flexible but I need something else. A different kind of flexibility I guess.
-
-* I was tempted to use `assert` sometimes as it is really fast to setup
-  but the code stops the first time the assertion is not satisfied and that's definitely
-  an unacceptable solution for me.
-
 * I want to have fun with tests in Python and have fun creating my own unit
   testing framework.
 
