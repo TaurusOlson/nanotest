@@ -1,0 +1,207 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Welcome to Nanotest’s documentation! &mdash; Nanotest 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Nanotest 1.0 documentation" href="#" />
+    <link rel="next" title="API" href="api.html" />
+   
+  
+  <link media="only screen and (max-device-width: 480px)" href="_static/small_flask.css" type= "text/css" rel="stylesheet" />
+
+  </head>
+  <body>
+  
+  
+  <div class=indexwrapper>
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="api.html" title="API"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">Nanotest 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="welcome-to-nanotest-s-documentation">
+<h1>Welcome to Nanotest&#8217;s documentation!<a class="headerlink" href="#welcome-to-nanotest-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="nanotest">
+<h2>Nanotest<a class="headerlink" href="#nanotest" title="Permalink to this headline">¶</a></h2>
+<p>Nanotest is a simple unit testing framework for Python.</p>
+</div>
+<div class="section" id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h2>
+<p>I want a quick way of testing my code. Testing should be easy and fun. It
+shouldn&#8217;t get in your way.  Actually I think it should almost be as natural as
+coding your main project.
+There are many frameworks so why write another one?</p>
+<p>Here are a few reasons:</p>
+<ul class="simple">
+<li>[unittest](<a class="reference external" href="http://docs.python.org/library/unittest.html">http://docs.python.org/library/unittest.html</a>) is great but I find
+it long to setup. Most of the time, its rigidity frustrates me and I end up
+skipping the testing phase!</li>
+<li>I want to have fun with tests in Python and have fun creating my own unit
+testing framework.</li>
+</ul>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>Import the test function:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">nanotest</span> <span class="kn">import</span> <span class="n">test</span>
+</pre></div>
+</div>
+<ul>
+<li><p class="first">Test (in)equality:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">test</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">eq</span><span class="p">(</span><span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c"># Output: 42 should be equal to 42... OK</span>
+
+<span class="n">test</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">ne</span><span class="p">(</span><span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+<span class="c"># Output: 42 should not be equal to 42... NOK</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test superiority:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">test</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+<span class="c"># Output: 42 should be greater than 41... OK</span>
+
+<span class="n">test</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">ge</span><span class="p">(</span><span class="mi">41</span><span class="p">)</span>
+<span class="c"># Output: 42 should be greater or equal to 41... OK</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test inferiority:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">test</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">lt</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span>
+<span class="c"># Output: 42 should be lower than 43... OK</span>
+
+<span class="n">test</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">le</span><span class="p">(</span><span class="mi">43</span><span class="p">)</span>
+<span class="c"># Output: 42 should be lower or equal to 43... OK</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Logical tests:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">test</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">is_</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># Output: True should be True... OK</span>
+
+<span class="n">test</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span><span class="o">.</span><span class="n">is_not</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="c"># Output: True should not be True... NOK</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Test inclusion:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">test</span><span class="p">(</span><span class="s">&quot;Spam, spam, spam and egg&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s">&quot;spam&quot;</span><span class="p">)</span>
+<span class="c"># Output: &#39;Spam, spam, spam and egg&#39; should contain &#39;spam&#39;... OK</span>
+
+<span class="n">test</span><span class="p">(</span><span class="s">&quot;Spam, spam, spam and egg&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">contains_no</span><span class="p">(</span><span class="s">&quot;bacon&quot;</span><span class="p">)</span>
+<span class="c"># Output: &#39;Spam, spam, spam and egg&#39; should not contain &#39;bacon&#39;... OK</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="the-name">
+<h2>The name<a class="headerlink" href="#the-name" title="Permalink to this headline">¶</a></h2>
+<p>I wanted a tiny testing framework. I like physics so nano sounds good. Hence nanotest ;)</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api.html">API</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><em>Index</em></a></li>
+<li><a class="reference internal" href="py-modindex.html"><em>Module Index</em></a></li>
+<li><a class="reference internal" href="search.html"><em>Search Page</em></a></li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Welcome to Nanotest&#8217;s documentation!</a><ul>
+<li><a class="reference internal" href="#nanotest">Nanotest</a></li>
+<li><a class="reference internal" href="#motivation">Motivation</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#the-name">The name</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="api.html" title="next chapter">API</a></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/index.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="footer">
+    &copy; Copyright 2012, Taurus Olson.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  
+  </div>
+  
+  </body>
+</html>

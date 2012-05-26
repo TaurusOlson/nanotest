@@ -1,0 +1,180 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API &mdash; Nanotest 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/flasky.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Nanotest 1.0 documentation" href="index.html" />
+    <link rel="prev" title="Welcome to Nanotest’s documentation!" href="index.html" />
+   
+  
+  <link media="only screen and (max-device-width: 480px)" href="_static/small_flask.css" type= "text/css" rel="stylesheet" />
+
+  </head>
+  <body>
+  
+  
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="index.html" title="Welcome to Nanotest’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Nanotest 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="nanotest.Nanotest">
+<em class="property">class </em><tt class="descclassname">nanotest.</tt><tt class="descname">Nanotest</tt><big>(</big><em>arg=None</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest" title="Permalink to this definition">¶</a></dt>
+<dd><p>This class allows to create a test for the value to be tested.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Usage :</th><td class="field-body"><p class="first">test = Nanotest(x)</p>
+<p class="last">test.eq(y)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="nanotest.Nanotest.eq">
+<tt class="descname">eq</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.eq" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that both values are equal</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.ne">
+<tt class="descname">ne</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.ne" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value is not equal to the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.gt">
+<tt class="descname">gt</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.gt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value is greater than the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.ge">
+<tt class="descname">ge</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.ge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value is greater or equal to the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.lt">
+<tt class="descname">lt</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.lt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value is lower than the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.le">
+<tt class="descname">le</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.le" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value is lower or equal to the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.is_">
+<tt class="descname">is_</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.is_" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value corresponds to the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.is_not">
+<tt class="descname">is_not</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.is_not" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value does not correspond to the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.contains">
+<tt class="descname">contains</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.contains" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value contains the given one.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="nanotest.Nanotest.contains_no">
+<tt class="descname">contains_no</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#nanotest.Nanotest.contains_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that the current value does not contain the given one.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="nanotest.test">
+<tt class="descclassname">nanotest.</tt><tt class="descname">test</tt><big>(</big><em>var</em><big>)</big><a class="headerlink" href="#nanotest.test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper"><h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to Nanotest&#8217;s documentation!</a></li>
+  </ul></li>
+</ul>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/api.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="footer">
+    &copy; Copyright 2012, Taurus Olson.
+    Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  
+  </body>
+</html>
