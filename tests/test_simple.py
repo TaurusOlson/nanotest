@@ -5,7 +5,6 @@ import sys
 sys.path.insert(0, os.path.abspath(".."))
 
 import nanotest
-from nose.tools import *
 
 
 def test_eq():
