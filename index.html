@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Nanotest by TaurusOlson</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/TaurusOlson/nanotest">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/TaurusOlson/nanotest/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/TaurusOlson/nanotest/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>Nanotest</h1>
+          <p>nanotest is a simple unit testing framework</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/TaurusOlson">TaurusOlson</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="http://twitter.com/#!/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>NANOTEST</h1>
+
+<p>nanotest is a simple unit testing framework for Python.</p>
+
+<h1>MOTIVATION</h1>
+
+<p>I want a quick way of testing my code. Testing should be easy and fun. It
+shouldn't get in your way.  Actually I think it should almost be as natural as
+coding your main project.
+There are many frameworks so why write another one?</p>
+
+<p>Here are a few reasons:</p>
+
+<ul>
+<li><p><a href="http://docs.python.org/library/unittest.html">unittest</a> is great but I find
+it long to setup. Most of the time, its rigidity frustrates me and I end up
+skipping the testing phase!</p></li>
+<li><p>I want to have fun with tests in Python and have fun creating my own unit
+testing framework.</p></li>
+</ul><h1>USAGE</h1>
+
+<pre><code>from nanotest import test
+</code></pre>
+
+<h2>Test (in)equality</h2>
+
+<pre><code>test(42).eq(40 + 2)
+# 42 should be equal to 42... OK
+
+test(42).ne(40 + 2)
+# 42 should not be equal to 42... NOK
+</code></pre>
+
+<h2>Test superiority</h2>
+
+<pre><code>test(42).gt(41)
+# 42 should be greater than 41... OK
+
+test(42).ge(41)
+# 42 should be greater or equal to 41... OK
+</code></pre>
+
+<h2>Test inferiority</h2>
+
+<pre><code>test(42).lt(43)
+# 42 should be lower than 43... OK
+
+test(42).le(43)
+# 42 should be lower or equal to 43... OK
+</code></pre>
+
+<h2>Logical tests</h2>
+
+<pre><code>test(True).is_(True)
+# True should be True... OK
+
+test(True).is_not(True)
+# True should not be True... NOK
+</code></pre>
+
+<h2>Test inclusion</h2>
+
+<pre><code>test("Spam, spam, spam and egg").contains("spam")
+# 'Spam, spam, spam and egg' should contain 'spam'... OK
+
+test("Spam, spam, spam and egg").contains_no("bacon")
+# 'Spam, spam, spam and egg' should not contain 'bacon'... OK
+</code></pre>
+
+<h1>THE NAME</h1>
+
+<p>I wanted a tiny testing framework. I like physics so nano sounds good. Hence nanotest ;)</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
